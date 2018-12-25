@@ -4,4 +4,4 @@ metadata:
   name: redis-config
 data:
   master.conf: |
-{{ .Values.masterConfig | indent 4 }}
+    {{ .Values.masterConfig | indent 4 }}
