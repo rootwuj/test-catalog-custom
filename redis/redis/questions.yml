@@ -1,5 +1,5 @@
 questions:
 - variable: masterConfig
-  default: "<match pattern>\n  @type stdout\n</match>"
+  description: "masterConfig"
   type: multiline
   label: config
