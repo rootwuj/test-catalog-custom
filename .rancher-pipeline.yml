@@ -2,7 +2,7 @@ stages:
 - name: test
   steps:
   - publishCatalogConfig:
-      path: ./wordpress/v1.0.4
+      path: ./charts/wordpress/v1.0.4
       catalog: wordpress44
       version: v1.0.4
       gitUrl: https://github.com/rootwuj/test-catalog-custom.git
