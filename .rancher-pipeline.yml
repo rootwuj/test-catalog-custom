@@ -4,7 +4,7 @@ stages:
   - publishCatalogConfig:
       path: ./wordpress/v1.0.5
       catalog: wordpress
-      version: v1.0.5
+      version: v1.0.4
       gitUrl: https://github.com/rootwuj/test-catalog-custom.git
       gitBranch: master
       gitAuthor: wujing
