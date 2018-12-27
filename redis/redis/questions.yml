@@ -1,5 +1,0 @@
-questions:
-- variable: masterConfig
-  description: "masterConfig"
-  type: multiline
-  label: config
