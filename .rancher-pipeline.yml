@@ -1,16 +1,4 @@
 stages:
-- name: test01
-  steps:
-  - envFrom:
-    - sourceName: s-9dz92
-      sourceKey: USERNAME
-      targetKey: USERNAME
-    - sourceName: s-9dz92
-      sourceKey: PASSWORD
-      targetKey: PASSWORD
-  - runScriptConfig:
-      image: java:8
-      shellScript: 'echo testaa '
 - name: test02
   steps:
   - publishImageConfig:
