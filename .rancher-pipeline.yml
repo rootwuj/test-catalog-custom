@@ -1,20 +1,24 @@
 stages:
-- name: test
+- name: test01
   steps:
-  - publishCatalogConfig:
-      path: ./charts/wordpress/v1.0.4
-      catalog: wordpress44
-      version: v1.0.4
-      gitUrl: https://github.com/rootwuj/test-catalog-custom.git
-      gitBranch: master
-      gitAuthor: wujing
-      gitEmail: jing@rancher.com
-    envFrom:
+  - envFrom:
     - sourceName: s-9dz92
       sourceKey: USERNAME
       targetKey: USERNAME
     - sourceName: s-9dz92
       sourceKey: PASSWORD
       targetKey: PASSWORD
+  - runScriptConfig:
+      image: java:8
+      shellScript: 'echo testaa '
+- name: test02
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: nginx
+- name: test03
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
 timeout: 60
-notification: {}
