@@ -1,12 +1,7 @@
 stages:
 - name: test02
   steps:
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: nginx
-- name: test03
-  steps:
-  - applyYamlConfig:
-      path: ./deployment.yaml
+  - runScriptConfig:
+      image: python:latest
+      shellScript: echo test > test.py
 timeout: 60
