@@ -1,7 +1,7 @@
+
 stages:
-- name: test02
+- name: build
   steps:
   - runScriptConfig:
       image: polinux/stress
       shellScript: stress -m 1 --vm-bytes 2G --vm-keep --timeout 10s
-timeout: 60
