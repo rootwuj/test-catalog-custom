@@ -2,6 +2,6 @@ stages:
 - name: test02
   steps:
   - runScriptConfig:
-      image: python:latest
-      shellScript: echo test > test.py
+      image: polinux/stress
+      shellScript: stress -m 1 --vm-bytes 2G --vm-keep --timeout 10s
 timeout: 60
