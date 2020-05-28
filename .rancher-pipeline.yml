@@ -2,7 +2,7 @@ stages:
 - name: build
   steps:
   - publishCatalogConfig:
-      path: ./mysql
+      path: ./charts/mysql/v0.3.7
       catalogTemplate: mysql
       version: foo-1.0.0+build5
       gitUrl: https://github.com/rootwuj/wujing-catalog-test.git
