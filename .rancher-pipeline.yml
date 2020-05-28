@@ -2,8 +2,8 @@ stages:
 - name: build
   steps:
   - applyAppConfig:
-      catalogTemplate: cattle-global-data:aaa-docker-registry
-      version: 1.8.1
-      name: test-pipe-aaa
+      catalogTemplate: cattle-global-data:foo-v2-docker-registry
+      version: 1.9.2
+      name: test-pipe-bbb
       targetNamespace: aaa
 notification: {}
