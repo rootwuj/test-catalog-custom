@@ -1,7 +1,9 @@
-
 stages:
 - name: build
   steps:
-  - runScriptConfig:
-      image: polinux/stress
-      shellScript: stress -m 1 --vm-bytes 2G --vm-keep --timeout 10s
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:aaa-docker-registry
+      version: 1.8.1
+      name: test-pipe-aaa
+      targetNamespace: aaa
+notification: {}
