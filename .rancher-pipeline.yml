@@ -1,9 +1,19 @@
 stages:
 - name: build
   steps:
-  - applyAppConfig:
-      catalogTemplate: cattle-global-data:foo-v2-docker-registry
-      version: 1.9.2
-      name: test-pipe-bbb
-      targetNamespace: aaa
+  - publishCatalogConfig:
+      path: ./mysql
+      catalogTemplate: mysql
+      version: foo-1.0.0+build5
+      gitUrl: https://github.com/rootwuj/wujing-catalog-test.git
+      gitBranch: master
+      gitAuthor: wuj
+      gitEmail: wuj@aa.com
+    envFrom:
+    - sourceName: test-pipeline
+      sourceKey: USERNAME
+      targetKey: USERNAME
+    - sourceName: test-pipeline
+      sourceKey: PASSWORD
+      targetKey: PASSWORD
 notification: {}
