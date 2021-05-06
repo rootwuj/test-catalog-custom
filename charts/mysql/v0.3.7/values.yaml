@@ -1,5 +1,7 @@
 ## mysql image version
 ## ref: https://hub.docker.com/r/library/mysql/tags/
+## 中文注释测试
+## 字符串测试：!@#$%^&*()_+?><|}{！@#¥
 ##
 image: "mysql"
 imageTag: "5.7.14"
